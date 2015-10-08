@@ -31,7 +31,16 @@ Further, the code will output the randomly generated game map into six different
 * ```mapStringCompressed.txt``` - Starts with height and widht seperated by "(", "," and ")", followed by ROOM_TYPE and its sequential count in brackets "(" and ")". This is similiar to run-length encoding
 * ```mapStringPosition.txt``` - Starts with height and widht seperated by "(", "," and ")", followed by ROOM_TYPE and its absolute position seperated by "(", "," and ")" - thus dropping all the unused eUNDEFINED.
 
-## Code Design Overview
+## Code Design
+
+The intention while writing the code is to show case patterns that can be utilized within the giving content. Design patterns used, included: <br>
+* Factory
+* Interface
+* Singleton
+* Receiver
+
+Further a logging header as integrated, from a third party, to make it easy to manage the debug levels, which can be controlled with the ``LOG_LEVEL`` #define.
+
 
 ## Discussion on Code
 ###In which area(s) is the code deficient?
