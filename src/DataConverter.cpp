@@ -549,7 +549,7 @@ uint64_t ConverterAbsoluteBinary::serialize(const IGameMap &map, void *output){
             uint8_t curr = temp_map[i][j];
             if (curr != (uint8_t)eUNDEFINED){
                 data_ptr[len++] = curr;
-                data_ptr[len++] = (uint8_t)j; //TODO: note that position is limited in size here, need to up it at some point
+                data_ptr[len++] = (uint8_t)j; 
                 data_ptr[len++] = (uint8_t)i;
             }
         }

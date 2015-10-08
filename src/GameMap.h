@@ -92,7 +92,7 @@ private:
     int32_t m_numberOfExistsAvailable;
     int32_t m_numberOfOtherRoomsAvailable;
     IPathFinder * m_PathFinder;
-    unordered_map<uint64_t, MapRoom *> m_positions; //TODO - note concern of large X and Y values
+    unordered_map<uint64_t, MapRoom *> m_positions; 
     void clearMap();
     void addNeighbours(MapRoom * );
     vector<pair<int64_t, int64_t>> getOpenSpots(uint64_t, uint64_t ) const;

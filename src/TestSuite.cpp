@@ -139,8 +139,8 @@ void TestSuite::findPath(void * data) const{
 
 void TestSuite::runAll() const{
     LOG_INFO("Starting Tests...");
-    IGameMap * myGame = new GameMap2DArray(); //TODO delete myGame
-    IGameMap * myGraphGame = new GameMapGraph(); //TODO delete myGame
+    IGameMap * myGame = new GameMap2DArray();
+    IGameMap * myGraphGame = new GameMapGraph();
     Receiver * receiver = Receiver::getInstance();
     //create random map
     receiver->sendEvent(Receiver::RECEIVER_EVENT::eCREATE_2D_ARRAY_RANDOM_MAP, (void *)myGame);
@@ -198,6 +198,8 @@ void TestSuite::runAll() const{
     receiver->sendEvent(Receiver::RECEIVER_EVENT::eCREATE_GRAPH_RANDOM_MAP, (void *)myGraphGame);
     //display map
     //receiver->sendEvent(Receiver::RECEIVER_EVENT::eDISPLAY_MAP, (void *)myGraphGame);
+    delete myGame;
+    delete myGraphGame;
     
     LOG_INFO("... Tests Completed!");
 }

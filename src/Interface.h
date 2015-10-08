@@ -46,7 +46,7 @@ enum PATH_SEARCH{
     ePATH_SEARCH_MAX
 };
 
-struct Point{ //TODO use Point instead of pairs
+struct Point{ 
     Point(int64_t xPos = 0, int64_t yPos = 0) : x(xPos), y(yPos){}
     int64_t x;
     int64_t y;
@@ -58,6 +58,7 @@ protected:
     GAME_MAP_TYPE type;
 public:
     IGameMap(GAME_MAP_TYPE t) : type(t){}
+    virtual ~IGameMap(){};
     GAME_MAP_TYPE getType() const {return type;}
     virtual void createRandomMap() = 0;
     virtual void display() const = 0;
