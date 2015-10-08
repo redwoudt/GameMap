@@ -1,0 +1,61 @@
+Problem:
+
+You're creating a game which has a very simple map structure. The map is a series of rooms, each of which has one entrance and zero to two exits. Each room can either be empty, contain a monster, contain a treasure, or be the exit from the map. One room is marked as the entrance to the map, and this would be where the player starts. 
+
+I've attached an image of an example map.
+
+You need to create data structures for the map, and operations on it. 
+
+The basic operations must be:
+
+
+1. Serialize the map to bytes, for saving to disk or writing to an output stream.
+
+
+2. Deserialize the byte representation of the map to memory.
+
+
+3. Find a path to the exit node.
+
+
+
+
+
+I'm looking for:
+
+
+1. Code style
+
+2. Code safety and correctness.
+
+
+3. The code running correctly.
+
+
+
+
+Some areas to consider optimizing would be:
+
+
+
+1. Succinctness of byte representation of the map - how small can you get the files on disk.
+
+
+2. Composibility and separation of concerns in the OO design - how could you easily switch between writing the map data to network vs disk? How could you inject a new serialization format?
+
+
+3. Any other interesting operations on the map - some examples off the top of my head would be:
+	
+
+a. Create a random map.
+	
+
+
+b. Find a path through the map that maximizes the treasure vs monsters score (+1 per treasure, -1 per monster).
+
+
+None of the optimizations are requirements though.
+
+
+The class design and three base operations shouldn't take very long, and can be done in whatever environment you'd prefer to work in (any language, any googling, etc.) as long as I can run it on my side.
+
