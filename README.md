@@ -80,11 +80,18 @@ d) ingesting bad data (wrong format, missing header, longer than defined in head
 * use the Point struct instead of using a pair. Point can be futher extended if needed, like working in 3D space, but a pair is very limited
 * threads - ideally the receiver and test suite should run in their own thread context. Due to time limitations this was not implemented
 * implement test tool to compare serialized and deserialized maps automatically
+
 ###What would you change and why?
 The following changes are at the front:
 * GameMap2DArray and GameMapGraph classes shared duplicate code, which should be moved into the parent. 
 * DataConverter.cpp - there is duplicate code for the different file formats, especially around header parsing. This should be moved into a shared function(s)
+
 ###How close do you think this is to what you would call "perfect" code, on a scale of 1 to 10
+I think the structure of the good is great (close to 10), due to the following reasons:
+* using the factory makes is easy to extend supported compression formats
+* seperating the implementation of the different key parts (serialization, File IO, game maps, path finding) using Interfaces makes it easy to integrate the code for external use - good encapsulation
+* the receiver singleton seperates the execution layer from the requested client, this allows for good low coupling between components as interaction goes through one well defined part
+* High cohesion is demonstrated by the relationship between the PathFinder and GameMap objects, as the PathFinder lifespan is tied to a 1:1 lifespan of a GameMap object
 
 ## Future Work
 The following features can be added:
