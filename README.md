@@ -102,8 +102,7 @@ Coding style and convention are good in terms of variable, function and class na
 
 Hardening of the code has not been much of a focus yet and will only get a 5 now.
 
-To conclude then, I will rate the code around 7-8.
-
+To conclude then, I will rate the code around 7-8, with the note that this code will only be completed once hardening as improved. 
 
 ## Future Work
 The following features can be added:
