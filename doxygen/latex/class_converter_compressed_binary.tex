@@ -1,0 +1,72 @@
+\hypertarget{class_converter_compressed_binary}{}\section{Converter\+Compressed\+Binary Class Reference}
+\label{class_converter_compressed_binary}\index{Converter\+Compressed\+Binary@{Converter\+Compressed\+Binary}}
+Inheritance diagram for Converter\+Compressed\+Binary\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_converter_compressed_binary}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_converter_compressed_binary_a9f45ab7b6c3c759037a5d6521b157be9}{}{\bfseries Converter\+Compressed\+Binary} (D\+A\+T\+A\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+T\+Y\+P\+E t=e\+C\+O\+M\+P\+R\+E\+S\+S\+E\+D\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+R\+U\+N\+\_\+\+L\+E\+N\+G\+T\+H)\label{class_converter_compressed_binary_a9f45ab7b6c3c759037a5d6521b157be9}
+
+\item 
+uint64\+\_\+t \hyperlink{class_converter_compressed_binary_a3b33aed8606972db9860d24e146b6aaf}{serialize} (const \hyperlink{class_i_game_map}{I\+Game\+Map} \&, void $\ast$)
+\item 
+void \hyperlink{class_converter_compressed_binary_a5cb711ee34a1bf170349424b478c6c41}{deserialize} (void $\ast$, \hyperlink{class_i_game_map}{I\+Game\+Map} \&, const uint64\+\_\+t \&=0)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_converter_compressed_binary_a5cb711ee34a1bf170349424b478c6c41}{}\index{Converter\+Compressed\+Binary@{Converter\+Compressed\+Binary}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!Converter\+Compressed\+Binary@{Converter\+Compressed\+Binary}}
+\subsubsection[{deserialize(void $\ast$, I\+Game\+Map \&, const uint64\+\_\+t \&=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Converter\+Compressed\+Binary\+::deserialize (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{path, }
+\item[{{\bf I\+Game\+Map} \&}]{map, }
+\item[{const uint64\+\_\+t \&}]{size = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_converter_compressed_binary_a5cb711ee34a1bf170349424b478c6c41}
+deserialize byte map into Game\+Map object. 
+\begin{DoxyParams}{Parameters}
+{\em map} & Game Map that will receive deserialize. \\
+\hline
+{\em path} & Can be U\+R\+L or file name to deserialize \\
+\hline
+{\em size} & Size of data \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_data_converter_ab238c18813133efdc066e424dfc4b62e}{I\+Data\+Converter}.
+
+\hypertarget{class_converter_compressed_binary_a3b33aed8606972db9860d24e146b6aaf}{}\index{Converter\+Compressed\+Binary@{Converter\+Compressed\+Binary}!serialize@{serialize}}
+\index{serialize@{serialize}!Converter\+Compressed\+Binary@{Converter\+Compressed\+Binary}}
+\subsubsection[{serialize(const I\+Game\+Map \&, void $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Converter\+Compressed\+Binary\+::serialize (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Game\+Map} \&}]{map, }
+\item[{void $\ast$}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_converter_compressed_binary_a3b33aed8606972db9860d24e146b6aaf}
+serialize Game\+Map object to byte map. 
+\begin{DoxyParams}{Parameters}
+{\em map} & Game Map instance to serialize. \\
+\hline
+{\em path} & Can be U\+R\+L or file name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size of serialized data 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_data_converter_a358ecdbe04ae180f7e0bb68c0fa141c9}{I\+Data\+Converter}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/fre04/\+Sandpit/linux/\+Game\+Map/src/Data\+Converter.\+h\item 
+/\+Users/fre04/\+Sandpit/linux/\+Game\+Map/src/Data\+Converter.\+cpp\end{DoxyCompactItemize}

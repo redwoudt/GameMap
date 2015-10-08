@@ -1,0 +1,116 @@
+\hypertarget{class_i_data_i_o}{}\section{I\+Data\+I\+O Class Reference}
+\label{class_i_data_i_o}\index{I\+Data\+I\+O@{I\+Data\+I\+O}}
+
+
+{\ttfamily \#include $<$Interface.\+h$>$}
+
+Inheritance diagram for I\+Data\+I\+O\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_data_i_o}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_i_data_i_o_ad684b0650c9cd79e7cf88b3a9d7aac38}{read} (const string \&path, string \&str) const  =0
+\item 
+virtual void \hyperlink{class_i_data_i_o_a81cee30c9e14d84e55734955e8c443dc}{read} (const string \&path, uint8\+\_\+t $\ast$$\ast$data, uint64\+\_\+t \&size) const  =0
+\item 
+virtual void \hyperlink{class_i_data_i_o_a9fe10ce1e824e755729e8dee2fd85d51}{write} (const string \&path, const string \&data)=0
+\item 
+virtual void \hyperlink{class_i_data_i_o_a451893a6dc454a695f0cb81a366e11a2}{write} (const string \&path, const uint64\+\_\+t $\ast$data, uint64\+\_\+t size)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An interface to define different data input/output mechanisms. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_i_data_i_o_ad684b0650c9cd79e7cf88b3a9d7aac38}{}\index{I\+Data\+I\+O@{I\+Data\+I\+O}!read@{read}}
+\index{read@{read}!I\+Data\+I\+O@{I\+Data\+I\+O}}
+\subsubsection[{read(const string \&path, string \&str) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\+Data\+I\+O\+::read (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{path, }
+\item[{string \&}]{str}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_data_i_o_ad684b0650c9cd79e7cf88b3a9d7aac38}
+Read from given location into given string. 
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to read from. \\
+\hline
+{\em str} & String to read data into. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_data_i_o_file_a0ca1959346e60d0bcfe1f86b9cdebd66}{Data\+I\+O\+File}.
+
+\hypertarget{class_i_data_i_o_a81cee30c9e14d84e55734955e8c443dc}{}\index{I\+Data\+I\+O@{I\+Data\+I\+O}!read@{read}}
+\index{read@{read}!I\+Data\+I\+O@{I\+Data\+I\+O}}
+\subsubsection[{read(const string \&path, uint8\+\_\+t $\ast$$\ast$data, uint64\+\_\+t \&size) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\+Data\+I\+O\+::read (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{path, }
+\item[{uint8\+\_\+t $\ast$$\ast$}]{data, }
+\item[{uint64\+\_\+t \&}]{size}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_data_i_o_a81cee30c9e14d84e55734955e8c443dc}
+Read from given location into given string. 
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to read from. \\
+\hline
+{\em data} & pointer to returned data. \\
+\hline
+{\em size} & size of data read. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_data_i_o_file_a10236e0813881fd79a9b96f301b7d87b}{Data\+I\+O\+File}.
+
+\hypertarget{class_i_data_i_o_a9fe10ce1e824e755729e8dee2fd85d51}{}\index{I\+Data\+I\+O@{I\+Data\+I\+O}!write@{write}}
+\index{write@{write}!I\+Data\+I\+O@{I\+Data\+I\+O}}
+\subsubsection[{write(const string \&path, const string \&data)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\+Data\+I\+O\+::write (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{path, }
+\item[{const string \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_data_i_o_a9fe10ce1e824e755729e8dee2fd85d51}
+Write to given location from given string. 
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to write to. \\
+\hline
+{\em data} & pointer to data to write. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_data_i_o_file_aaa9cd76dfc1eee5a897e9359bdbbb371}{Data\+I\+O\+File}.
+
+\hypertarget{class_i_data_i_o_a451893a6dc454a695f0cb81a366e11a2}{}\index{I\+Data\+I\+O@{I\+Data\+I\+O}!write@{write}}
+\index{write@{write}!I\+Data\+I\+O@{I\+Data\+I\+O}}
+\subsubsection[{write(const string \&path, const uint64\+\_\+t $\ast$data, uint64\+\_\+t size)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\+Data\+I\+O\+::write (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{path, }
+\item[{const uint64\+\_\+t $\ast$}]{data, }
+\item[{uint64\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_data_i_o_a451893a6dc454a695f0cb81a366e11a2}
+Write to given location from given string. 
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to write to. \\
+\hline
+{\em data} & pointer to data to write. \\
+\hline
+{\em size} & size of data to write. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_data_i_o_file_ae294f4cb8cd90f63f241d19bac52b580}{Data\+I\+O\+File}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/fre04/\+Sandpit/linux/\+Game\+Map/src/Interface.\+h\end{DoxyCompactItemize}

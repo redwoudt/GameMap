@@ -1,0 +1,195 @@
+\hypertarget{class_game_map_graph}{}\section{Game\+Map\+Graph Class Reference}
+\label{class_game_map_graph}\index{Game\+Map\+Graph@{Game\+Map\+Graph}}
+Inheritance diagram for Game\+Map\+Graph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_map_graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_game_map_graph_a3152252cb8e531ae75e4b86fba45cf31}{}{\bfseries Game\+Map\+Graph} (int32\+\_\+t width=0, int32\+\_\+t height=0)\label{class_game_map_graph_a3152252cb8e531ae75e4b86fba45cf31}
+
+\item 
+\hypertarget{class_game_map_graph_a025a4d4af85e1529c00975f517caea03}{}vector$<$ \hyperlink{class_map_room}{Map\+Room} $\ast$ $>$ {\bfseries get\+Path} (bool optimal=false) const \label{class_game_map_graph_a025a4d4af85e1529c00975f517caea03}
+
+\item 
+void \hyperlink{class_game_map_graph_ac6edc57767b6e254cda08a74ae2181af}{create\+Random\+Map} ()
+\item 
+void \hyperlink{class_game_map_graph_a9550981dd6839568b4101b033f2d1572}{display} () const 
+\item 
+uint64\+\_\+t \hyperlink{class_game_map_graph_a6ebd4eb5ab90494562a4fa1fac395e9b}{get\+Width} () const 
+\item 
+uint64\+\_\+t \hyperlink{class_game_map_graph_a07dfd4bc26e30a22d2b13412c97aab63}{get\+Height} () const 
+\item 
+void $\ast$ \hyperlink{class_game_map_graph_a1248229f09100e380d984be80b53e101}{get\+Map} () const 
+\item 
+void \hyperlink{class_game_map_graph_a3ad14fe9fcbffbbf2f10a7001fcb7a18}{set\+Width} (const uint64\+\_\+t \&)
+\item 
+void \hyperlink{class_game_map_graph_aae07cb7e5bf3c212f169791991579cea}{set\+Height} (const uint64\+\_\+t \&)
+\item 
+void \hyperlink{class_game_map_graph_a6076fd5cff9ca9c9bd3b05f52d8e9f72}{set\+Map} (void $\ast$)
+\item 
+vector$<$ pair$<$ int64\+\_\+t, int64\+\_\+t $>$ $>$ \hyperlink{class_game_map_graph_a90b718efe74e0bc2c4f293a25862ee95}{get\+Path} (const P\+A\+T\+H\+\_\+\+S\+E\+A\+R\+C\+H=e\+B\+R\+E\+A\+D\+T\+H\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+E\+A\+R\+C\+H) const 
+\item 
+void $\ast$ \hyperlink{class_game_map_graph_af58b1faac9bf682fef17fd93e5c364f5}{get\+Entrance} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_map_graph_ac6edc57767b6e254cda08a74ae2181af}{}\index{Game\+Map\+Graph@{Game\+Map\+Graph}!create\+Random\+Map@{create\+Random\+Map}}
+\index{create\+Random\+Map@{create\+Random\+Map}!Game\+Map\+Graph@{Game\+Map\+Graph}}
+\subsubsection[{create\+Random\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Map\+Graph\+::create\+Random\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_game_map_graph_ac6edc57767b6e254cda08a74ae2181af}
+Create a Random Game Map. This will fill a predefined map size with an entrance, 0 to 2 exits and a random number of monster, treaure and empty rooms \begin{DoxyReturn}{Returns}
+Returns Game Map type 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_game_map_a611761470c396e89f98c7fe7d307dd6f}{I\+Game\+Map}.
+
+\hypertarget{class_game_map_graph_a9550981dd6839568b4101b033f2d1572}{}\index{Game\+Map\+Graph@{Game\+Map\+Graph}!display@{display}}
+\index{display@{display}!Game\+Map\+Graph@{Game\+Map\+Graph}}
+\subsubsection[{display() const }]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Map\+Graph\+::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_game_map_graph_a9550981dd6839568b4101b033f2d1572}
+Display Game Map. 
+
+Implements \hyperlink{class_i_game_map_acc38a0d85cfb39ee8167eeb2f92706eb}{I\+Game\+Map}.
+
+\hypertarget{class_game_map_graph_af58b1faac9bf682fef17fd93e5c364f5}{}\index{Game\+Map\+Graph@{Game\+Map\+Graph}!get\+Entrance@{get\+Entrance}}
+\index{get\+Entrance@{get\+Entrance}!Game\+Map\+Graph@{Game\+Map\+Graph}}
+\subsubsection[{get\+Entrance() const }]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Game\+Map\+Graph\+::get\+Entrance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_game_map_graph_af58b1faac9bf682fef17fd93e5c364f5}
+Get Entrance room location. \begin{DoxyReturn}{Returns}
+entrance room location. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_game_map_ac24724d266d18fc6bb81b8e015c86dba}{I\+Game\+Map}.
+
+\hypertarget{class_game_map_graph_a07dfd4bc26e30a22d2b13412c97aab63}{}\index{Game\+Map\+Graph@{Game\+Map\+Graph}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!Game\+Map\+Graph@{Game\+Map\+Graph}}
+\subsubsection[{get\+Height() const }]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Game\+Map\+Graph\+::get\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_game_map_graph_a07dfd4bc26e30a22d2b13412c97aab63}
+Get Game Map Height. \begin{DoxyReturn}{Returns}
+height of map 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_game_map_a7adc098061e938548c3dc49510599dcb}{I\+Game\+Map}.
+
+\hypertarget{class_game_map_graph_a1248229f09100e380d984be80b53e101}{}\index{Game\+Map\+Graph@{Game\+Map\+Graph}!get\+Map@{get\+Map}}
+\index{get\+Map@{get\+Map}!Game\+Map\+Graph@{Game\+Map\+Graph}}
+\subsubsection[{get\+Map() const }]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Game\+Map\+Graph\+::get\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_game_map_graph_a1248229f09100e380d984be80b53e101}
+Get Pointer to Game Map data. \begin{DoxyReturn}{Returns}
+Pointer to Game Map data. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_game_map_af3cd6a615cb70c9f0072c650329bb40f}{I\+Game\+Map}.
+
+\hypertarget{class_game_map_graph_a90b718efe74e0bc2c4f293a25862ee95}{}\index{Game\+Map\+Graph@{Game\+Map\+Graph}!get\+Path@{get\+Path}}
+\index{get\+Path@{get\+Path}!Game\+Map\+Graph@{Game\+Map\+Graph}}
+\subsubsection[{get\+Path(const P\+A\+T\+H\+\_\+\+S\+E\+A\+R\+C\+H=e\+B\+R\+E\+A\+D\+T\+H\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+E\+A\+R\+C\+H) const }]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ pair$<$ int64\+\_\+t, int64\+\_\+t $>$ $>$ Game\+Map\+Graph\+::get\+Path (
+\begin{DoxyParamCaption}
+\item[{const P\+A\+T\+H\+\_\+\+S\+E\+A\+R\+C\+H}]{type = {\ttfamily eBREADTH\+\_\+FIRST\+\_\+SEARCH}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_game_map_graph_a90b718efe74e0bc2c4f293a25862ee95}
+Get Optimal Path from Entrance to Exit (if exists). 
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of search algorithm to apply. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+optimal path. Or empty vector if none exists. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_game_map_a1f5ed4f70b4bacfeac277842f335c2c1}{I\+Game\+Map}.
+
+\hypertarget{class_game_map_graph_a6ebd4eb5ab90494562a4fa1fac395e9b}{}\index{Game\+Map\+Graph@{Game\+Map\+Graph}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!Game\+Map\+Graph@{Game\+Map\+Graph}}
+\subsubsection[{get\+Width() const }]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Game\+Map\+Graph\+::get\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_game_map_graph_a6ebd4eb5ab90494562a4fa1fac395e9b}
+Get Game Map Width. \begin{DoxyReturn}{Returns}
+width of map 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_game_map_a83e726799e1159ccc08a32267802299c}{I\+Game\+Map}.
+
+\hypertarget{class_game_map_graph_aae07cb7e5bf3c212f169791991579cea}{}\index{Game\+Map\+Graph@{Game\+Map\+Graph}!set\+Height@{set\+Height}}
+\index{set\+Height@{set\+Height}!Game\+Map\+Graph@{Game\+Map\+Graph}}
+\subsubsection[{set\+Height(const uint64\+\_\+t \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Map\+Graph\+::set\+Height (
+\begin{DoxyParamCaption}
+\item[{const uint64\+\_\+t \&}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_game_map_graph_aae07cb7e5bf3c212f169791991579cea}
+Set Game Map Width. 
+\begin{DoxyParams}{Parameters}
+{\em height} & to set map to. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_game_map_a92ae9478169b2154c3bf47ff41ebcd8e}{I\+Game\+Map}.
+
+\hypertarget{class_game_map_graph_a6076fd5cff9ca9c9bd3b05f52d8e9f72}{}\index{Game\+Map\+Graph@{Game\+Map\+Graph}!set\+Map@{set\+Map}}
+\index{set\+Map@{set\+Map}!Game\+Map\+Graph@{Game\+Map\+Graph}}
+\subsubsection[{set\+Map(void $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Map\+Graph\+::set\+Map (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_game_map_graph_a6076fd5cff9ca9c9bd3b05f52d8e9f72}
+Set Game Map data. 
+\begin{DoxyParams}{Parameters}
+{\em map} & Game Map data. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_game_map_aa0923e64ca5563724c471e11b8b9d397}{I\+Game\+Map}.
+
+\hypertarget{class_game_map_graph_a3ad14fe9fcbffbbf2f10a7001fcb7a18}{}\index{Game\+Map\+Graph@{Game\+Map\+Graph}!set\+Width@{set\+Width}}
+\index{set\+Width@{set\+Width}!Game\+Map\+Graph@{Game\+Map\+Graph}}
+\subsubsection[{set\+Width(const uint64\+\_\+t \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Map\+Graph\+::set\+Width (
+\begin{DoxyParamCaption}
+\item[{const uint64\+\_\+t \&}]{width}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_game_map_graph_a3ad14fe9fcbffbbf2f10a7001fcb7a18}
+Set Game Map Width. 
+\begin{DoxyParams}{Parameters}
+{\em width} & to set map to. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_game_map_acf90d31ca830d07356ef4238243e392e}{I\+Game\+Map}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/fre04/\+Sandpit/linux/\+Game\+Map/src/Game\+Map.\+h\item 
+/\+Users/fre04/\+Sandpit/linux/\+Game\+Map/src/Game\+Map.\+cpp\end{DoxyCompactItemize}

@@ -13,7 +13,7 @@
 #include "GameMap.h"
 
 using std::string;
-    
+
 class ConverterString : public IDataConverter{
 public:
     ConverterString(DATA_CONVERSION_TYPE t = eSTRING) : IDataConverter(t){}

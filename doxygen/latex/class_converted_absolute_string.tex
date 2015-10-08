@@ -1,0 +1,72 @@
+\hypertarget{class_converted_absolute_string}{}\section{Converted\+Absolute\+String Class Reference}
+\label{class_converted_absolute_string}\index{Converted\+Absolute\+String@{Converted\+Absolute\+String}}
+Inheritance diagram for Converted\+Absolute\+String\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_converted_absolute_string}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_converted_absolute_string_a2352bc38db0a4fdca494981654a19bf0}{}{\bfseries Converted\+Absolute\+String} (D\+A\+T\+A\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+T\+Y\+P\+E t=e\+C\+O\+M\+P\+R\+E\+S\+S\+E\+D\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N)\label{class_converted_absolute_string_a2352bc38db0a4fdca494981654a19bf0}
+
+\item 
+uint64\+\_\+t \hyperlink{class_converted_absolute_string_afa4ed352d4b11297bfff2a8f07a0bea4}{serialize} (const \hyperlink{class_i_game_map}{I\+Game\+Map} \&, void $\ast$)
+\item 
+void \hyperlink{class_converted_absolute_string_a827f3edeb31a7b335e945cd89e74a8da}{deserialize} (void $\ast$, \hyperlink{class_i_game_map}{I\+Game\+Map} \&, const uint64\+\_\+t \&=0)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_converted_absolute_string_a827f3edeb31a7b335e945cd89e74a8da}{}\index{Converted\+Absolute\+String@{Converted\+Absolute\+String}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!Converted\+Absolute\+String@{Converted\+Absolute\+String}}
+\subsubsection[{deserialize(void $\ast$, I\+Game\+Map \&, const uint64\+\_\+t \&=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Converted\+Absolute\+String\+::deserialize (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{path, }
+\item[{{\bf I\+Game\+Map} \&}]{map, }
+\item[{const uint64\+\_\+t \&}]{size = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_converted_absolute_string_a827f3edeb31a7b335e945cd89e74a8da}
+deserialize byte map into Game\+Map object. 
+\begin{DoxyParams}{Parameters}
+{\em map} & Game Map that will receive deserialize. \\
+\hline
+{\em path} & Can be U\+R\+L or file name to deserialize \\
+\hline
+{\em size} & Size of data \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_data_converter_ab238c18813133efdc066e424dfc4b62e}{I\+Data\+Converter}.
+
+\hypertarget{class_converted_absolute_string_afa4ed352d4b11297bfff2a8f07a0bea4}{}\index{Converted\+Absolute\+String@{Converted\+Absolute\+String}!serialize@{serialize}}
+\index{serialize@{serialize}!Converted\+Absolute\+String@{Converted\+Absolute\+String}}
+\subsubsection[{serialize(const I\+Game\+Map \&, void $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Converted\+Absolute\+String\+::serialize (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Game\+Map} \&}]{map, }
+\item[{void $\ast$}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_converted_absolute_string_afa4ed352d4b11297bfff2a8f07a0bea4}
+serialize Game\+Map object to byte map. 
+\begin{DoxyParams}{Parameters}
+{\em map} & Game Map instance to serialize. \\
+\hline
+{\em path} & Can be U\+R\+L or file name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size of serialized data 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_data_converter_a358ecdbe04ae180f7e0bb68c0fa141c9}{I\+Data\+Converter}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/fre04/\+Sandpit/linux/\+Game\+Map/src/Data\+Converter.\+h\item 
+/\+Users/fre04/\+Sandpit/linux/\+Game\+Map/src/Data\+Converter.\+cpp\end{DoxyCompactItemize}

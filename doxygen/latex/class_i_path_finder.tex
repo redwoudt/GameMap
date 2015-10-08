@@ -1,0 +1,80 @@
+\hypertarget{class_i_path_finder}{}\section{I\+Path\+Finder Class Reference}
+\label{class_i_path_finder}\index{I\+Path\+Finder@{I\+Path\+Finder}}
+
+
+{\ttfamily \#include $<$Interface.\+h$>$}
+
+Inheritance diagram for I\+Path\+Finder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_path_finder}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_i_path_finder_a1ca8ee9819bc843eb444a078e599bd13}{$\sim$\+I\+Path\+Finder} ()
+\item 
+virtual vector$<$ pair$<$ int64\+\_\+t, int64\+\_\+t $>$ $>$ \hyperlink{class_i_path_finder_acf37f7a35ba3d26c3ed019cb952d940c}{get\+Path\+Depth\+F\+S} (const \hyperlink{class_i_game_map}{I\+Game\+Map} \&map) const  =0
+\item 
+virtual vector$<$ pair$<$ int64\+\_\+t, int64\+\_\+t $>$ $>$ \hyperlink{class_i_path_finder_aee9d3cd450bd391b4586c441f319751d}{get\+Path\+Breath\+F\+S} (const \hyperlink{class_i_game_map}{I\+Game\+Map} \&) const  =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An interface for path finder algorithms. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_i_path_finder_a1ca8ee9819bc843eb444a078e599bd13}{}\index{I\+Path\+Finder@{I\+Path\+Finder}!````~I\+Path\+Finder@{$\sim$\+I\+Path\+Finder}}
+\index{````~I\+Path\+Finder@{$\sim$\+I\+Path\+Finder}!I\+Path\+Finder@{I\+Path\+Finder}}
+\subsubsection[{$\sim$\+I\+Path\+Finder()}]{\setlength{\rightskip}{0pt plus 5cm}virtual I\+Path\+Finder\+::$\sim$\+I\+Path\+Finder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_i_path_finder_a1ca8ee9819bc843eb444a078e599bd13}
+Virtual Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_i_path_finder_aee9d3cd450bd391b4586c441f319751d}{}\index{I\+Path\+Finder@{I\+Path\+Finder}!get\+Path\+Breath\+F\+S@{get\+Path\+Breath\+F\+S}}
+\index{get\+Path\+Breath\+F\+S@{get\+Path\+Breath\+F\+S}!I\+Path\+Finder@{I\+Path\+Finder}}
+\subsubsection[{get\+Path\+Breath\+F\+S(const I\+Game\+Map \&) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual vector$<$pair$<$int64\+\_\+t, int64\+\_\+t$>$ $>$ I\+Path\+Finder\+::get\+Path\+Breath\+F\+S (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Game\+Map} \&}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_path_finder_aee9d3cd450bd391b4586c441f319751d}
+Get Optimal Path from Entrance to Exit (if exists) using B\+F\+S. 
+\begin{DoxyParams}{Parameters}
+{\em map} & Game Map to search. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+optimal path. Or empty vector if none exists. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_path_finder_af5892fedb5285d46f20954e427d865df}{Path\+Finder}.
+
+\hypertarget{class_i_path_finder_acf37f7a35ba3d26c3ed019cb952d940c}{}\index{I\+Path\+Finder@{I\+Path\+Finder}!get\+Path\+Depth\+F\+S@{get\+Path\+Depth\+F\+S}}
+\index{get\+Path\+Depth\+F\+S@{get\+Path\+Depth\+F\+S}!I\+Path\+Finder@{I\+Path\+Finder}}
+\subsubsection[{get\+Path\+Depth\+F\+S(const I\+Game\+Map \&map) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual vector$<$pair$<$int64\+\_\+t, int64\+\_\+t$>$ $>$ I\+Path\+Finder\+::get\+Path\+Depth\+F\+S (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Game\+Map} \&}]{map}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_i_path_finder_acf37f7a35ba3d26c3ed019cb952d940c}
+Get Optimal Path from Entrance to Exit (if exists) using D\+F\+S. 
+\begin{DoxyParams}{Parameters}
+{\em map} & Game Map to search. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+optimal path. Or empty vector if none exists. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_path_finder_a3af15946ecc7cc3543dd828ee56b7145}{Path\+Finder}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/fre04/\+Sandpit/linux/\+Game\+Map/src/Interface.\+h\end{DoxyCompactItemize}
