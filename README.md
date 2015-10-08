@@ -25,6 +25,7 @@ enum ROOM_TYPE{<br>
     eTOTAL = 6<br>
 };<br>
 ``Note: eTOTAL is not used in the presentation.``<br>
+
 ###Serialization
 Further, the code will output the randomly generated game map into six different serialized formats, within the ``dataFiles`` folder, the formats are:<br>
 * ```mapBinary.dat``` - Plain binary, where the height and width take 64-bits each, followed by 8-bits per element for a complete 2D array, using the values as defined above (ROOM_TYPE)
@@ -33,10 +34,12 @@ Further, the code will output the randomly generated game map into six different
 * ```mapString.dat``` - Plain string characters, where the height and widht and seperated by "(", "," and ")", followed by the complete 2D array values (as per ROOM_TYPE)
 * ```mapStringCompressed.txt``` - Starts with height and widht seperated by "(", "," and ")", followed by ROOM_TYPE and its sequential count in brackets "(" and ")". This is similiar to run-length encoding
 * ```mapStringPosition.txt``` - Starts with height and widht seperated by "(", "," and ")", followed by ROOM_TYPE and its absolute position seperated by "(", "," and ")" - thus dropping all the unused eUNDEFINED.<br>
+
 ###Map Data Structures
 Two map data structures where used, namely <br>:
 * 2D Array - this is fine for small maps, but will be a concern for large maps as a lot of space is potentially used for undefined space <br>
 * Graph - each room is linked to its neighbours in typical graph form.  <br>
+
 ###Test Suite
 A Test suite was created that basically runs the following sequence of tests:<br>
 1) create random map<br>
@@ -50,6 +53,7 @@ A Test suite was created that basically runs the following sequence of tests:<br
 9-14) read-in each file and convert back to map<br>
 15) find optimal path<br>
 16) create graph map<br>
+
 ## Code Design
 
 The intention while writing the code is to show case patterns that can be utilized within the giving content. Design patterns used, included: <br>
