@@ -40,6 +40,9 @@ Two map data structures where used, namely: <br>
 * ``2D Array`` - this is fine for small maps, but will be a concern for large maps as a lot of space is potentially used for undefined space <br>
 * ``Graph`` - each room is linked to its neighbours in typical graph form.  <br>
 
+###Path Finder
+Depth-First Search was applied to obtain the list of valid routes from the entrance to the exits. The best, in terms of total score, was picked from the list of valid routes. Similiarly Breath-First Search could have been used. 
+
 ###Test Suite
 A Test suite was created that basically runs the following sequence of tests:<br>
 1) create random map<br>
@@ -56,13 +59,13 @@ A Test suite was created that basically runs the following sequence of tests:<br
 
 ## Code Design
 
-The intention while writing the code is to show case patterns that can be utilized within the giving content. Design patterns used, included: <br>
+The intention, while writing the code, was to show case patterns that can be utilized, within the giving content. Design patterns used, included: <br>
 * ``Factory``
 * ``Interface``
 * ``Singleton``
 * ``Receiver``
 
-Further a logging header as integrated, from a third party, to make it easy to manage the debug levels, which can be controlled with the ``LOG_LEVEL`` #define.
+Further, a logging header as integrated, from a third party, to make it easy to manage the debug levels, which can be controlled with the ``LOG_LEVEL`` #define.
 
 
 ## Discussion on Code
@@ -70,3 +73,8 @@ Further a logging header as integrated, from a third party, to make it easy to m
 ###What would you change and why?
 ###How close do you think this is to what you would call "perfect" code, on a scale of 1 to 10
 
+## Future Work
+The following features can be added:
+* JSON file import and export
+* Breath-First Search for 2D Array
+* DFS and BFS For Graph
