@@ -88,6 +88,7 @@ d) ingesting bad data (wrong format, missing header, longer than defined in head
 The following changes are at the front:
 * GameMap2DArray and GameMapGraph classes shared duplicate code, which should be moved into the parent. 
 * DataConverter.cpp - there is duplicate code for the different file formats, especially around header parsing. This should be moved into a shared function(s)
+* I would review the uint8_t size limit placed on coordinates when serializing some of the binary formats. This should be reviewed in the context of how big the height and widht can be against the compression trade-offs. The same applies to the unordered_map's key being a 64-bit combination of the x and y coordinates for the Graph random generation. 
 
 ###How close do you think this is to what you would call "perfect" code, on a scale of 1 to 10
 I think the structure of the good is great (close to 10), due to the following reasons:
