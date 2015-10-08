@@ -36,9 +36,9 @@ Further, the code will output the randomly generated game map into six different
 * ```mapStringPosition.txt``` - Starts with height and widht seperated by "(", "," and ")", followed by ROOM_TYPE and its absolute position seperated by "(", "," and ")" - thus dropping all the unused eUNDEFINED.<br>
 
 ###Map Data Structures
-Two map data structures where used, namely <br>:
-* 2D Array - this is fine for small maps, but will be a concern for large maps as a lot of space is potentially used for undefined space <br>
-* Graph - each room is linked to its neighbours in typical graph form.  <br>
+Two map data structures where used, namely: <br>
+* ``2D Array`` - this is fine for small maps, but will be a concern for large maps as a lot of space is potentially used for undefined space <br>
+* ``Graph`` - each room is linked to its neighbours in typical graph form.  <br>
 
 ###Test Suite
 A Test suite was created that basically runs the following sequence of tests:<br>
@@ -57,10 +57,10 @@ A Test suite was created that basically runs the following sequence of tests:<br
 ## Code Design
 
 The intention while writing the code is to show case patterns that can be utilized within the giving content. Design patterns used, included: <br>
-* Factory
-* Interface
-* Singleton
-* Receiver
+* ``Factory``
+* ``Interface``
+* ``Singleton``
+* ``Receiver``
 
 Further a logging header as integrated, from a third party, to make it easy to manage the debug levels, which can be controlled with the ``LOG_LEVEL`` #define.
 
