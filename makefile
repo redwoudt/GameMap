@@ -8,22 +8,22 @@ ARCHIVE = $(MYPROGRAM).tar.gz
 $(MYPROGRAM) : $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o $(MYPROGRAM)
 
-DataConverter.o: DataConverter.cpp DataConverter.h 
-	$(CC) $(CFLAGS) DataConverter.cpp
-DataIO.o: DataIO.cpp DataIO.h
-	$(CC) $(CFLAGS) DataIO.cpp
-main.o: main.cpp
-	$(CC) $(CFLAGS) main.cpp
-GameMap.o: GameMap.cpp GameMap.h
-	$(CC) $(CFLAGS) GameMap.cpp
-PathFinder.o: PathFinder.cpp PathFinder.h 
-	$(CC) $(CFLAGS) PathFinder.cpp
-Receiver.o: Receiver.cpp Receiver.h 
-	$(CC) $(CFLAGS) Receiver.cpp
-Factory.o: Factory.cpp Factory.h 
-	$(CC) $(CFLAGS) Factory.cpp
-TestSuite.o: TestSuite.cpp TestSuite.h 
-	$(CC) $(CFLAGS) TestSuite.cpp
+DataConverter.o: src/DataConverter.cpp src/DataConverter.h 
+	$(CC) $(CFLAGS) src/DataConverter.cpp
+DataIO.o: src/DataIO.cpp src/DataIO.h
+	$(CC) $(CFLAGS) src/DataIO.cpp
+main.o: src/main.cpp
+	$(CC) $(CFLAGS) src/main.cpp
+GameMap.o: src/GameMap.cpp src/GameMap.h
+	$(CC) $(CFLAGS) src/GameMap.cpp
+PathFinder.o: src/PathFinder.cpp src/PathFinder.h 
+	$(CC) $(CFLAGS) src/PathFinder.cpp
+Receiver.o: src/Receiver.cpp src/Receiver.h 
+	$(CC) $(CFLAGS) src/Receiver.cpp
+Factory.o: src/Factory.cpp src/Factory.h 
+	$(CC) $(CFLAGS) src/Factory.cpp
+TestSuite.o: src/TestSuite.cpp src/TestSuite.h 
+	$(CC) $(CFLAGS) src/TestSuite.cpp
 
 clean:
 	\rm *.o *~ $(MYPROGRAM)

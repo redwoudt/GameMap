@@ -18,6 +18,6 @@ const int MAX_NUMBER_OF_OTHER_ROOMS = 20;
 const int SIMPLE_MAP_WIDTH = 10;
 const int SIMPLE_MAP_HEIGHT = 10;
 
-const string FILE_ROOT_PATH = "";
+const string FILE_ROOT_PATH = "dataFiles/";
 
 #endif
