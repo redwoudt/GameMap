@@ -71,11 +71,11 @@ Further, a logging header was integrated, from a third party, to make it easier 
 ## Discussion on Code
 ###In which area(s) is the code deficient?
 The following needs to be looked at: <br>
-* unhappy paths - unit testing should be implemented to expose elements like the following:
+* unhappy paths - unit testing should be implemented to expose elements like the following: <br>
 ** upper and lower bound values
 ** negative values
 ** making calls out of sequence
-** ingesting bad data (wrong format, missing header, longer than defined in header, etc)
+** ingesting bad data (wrong format, missing header, longer than defined in header, etc) <br>
 * namespaces & code seperation - ideally the classes should be grouped into their own namespaces to help scope the data and avoid future conflicts
 * use the Point struct instead of using a pair. Point can be futher extended if needed, like working in 3D space, but a pair is very limited
 * threads - ideally the receiver and test suite should run in their own thread context. Due to time limitations this was not implemented
