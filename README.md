@@ -59,7 +59,7 @@ A Test suite was created that basically runs the following sequence of tests:<br
 
 ## Code Design
 
-The intention, while writing the code, was to show case patterns that can be utilized, within the giving content. Design patterns used, included: <br>
+The intention, while writing the code, was to showcase patterns that can be utilized, within the given content. Design patterns used, included: <br>
 * ``Factory``
 * ``Interface``
 * ``Singleton``
@@ -68,7 +68,7 @@ The intention, while writing the code, was to show case patterns that can be uti
 Further notes on the code: <br>
 * a logging header was integrated, from a third party, to make it easier to manage the debug levels, which can be controlled with the ``LOG_LEVEL`` #define. 
 * The ``unique_ptr`` was also used.
-* const was used to ensure functions and parameters can not work outside their remit
+* ``const`` was used to ensure functions and parameters can not work outside their remit
 
 ## Discussion on Code
 ###In which area(s) is the code deficient?
@@ -78,8 +78,8 @@ a) upper and lower bound values<br>
 b) negative values<br>
 c) making calls out of sequence<br>
 d) ingesting bad data (wrong format, missing header, longer than defined in header, etc) <br>
-* namespaces & code seperation - ideally the classes should be grouped into their own namespaces to help scope the data and avoid future conflicts
-* use the Point struct instead of using a pair. Point can be futher extended if needed, like working in 3D space, but a pair is very limited
+* namespaces & code seperation - ideally the classes should be grouped into their own namespaces to help scope the data and avoid potential conflicts in a larger project
+* use the Point struct instead of using a pair. Point can be futher extended if needed, like working in 3D space, a pair is very limited
 * threads - ideally the receiver and test suite should run in their own thread context. Due to time limitations this was not implemented
 * implement test tool to compare serialized and deserialized maps automatically
 * error handling - currently the error handling is very basic, expections should be thrown and handled 
@@ -94,15 +94,15 @@ I think the structure of the good is great (close to 10), due to the following r
 * using the factory makes is easy to extend supported compression formats and allow for dependency inversion by obscuring the low-level implementation from the feature user
 * seperating the implementation of the different key parts (serialization, File IO, game maps, path finding) using Interfaces makes it easy to integrate the code for external use - good encapsulation & re-use
 * the receiver singleton seperates the execution layer from the requested client, this allows for good low coupling between components, as interaction goes through one, well defined, part
-* High cohesion is demonstrated by the relationship between the PathFinder and GameMap objects, as the PathFinder lifespan is tied to a 1:1 lifespan of a GameMap object
+* High cohesion is demonstrated by the relationship between the PathFinder and GameMap objects, as the PathFinder lifespan is tied to a 1:1 lifespan of a GameMap object. PathFinder could be nested within IGameMap implementationts to highlight this further, however Pathfinder might be used by more than just the GameMap - for example a player in the game could make use of it 
 
-Testability is pretty good as well, as demonstrated by the TestSuite class, maybe an 8.
+Testability is pretty good, as demonstrated by the TestSuite class, maybe an 8.
 
 Coding style and convention are good in terms of variable, function and class names. The use of const is also well utilized. The code does require more comments and should go through Doxygen testing before completing the code. 
 
 Hardening of the code has not been much of a focus yet and will only get a 5 now.
 
-To conclude then, I will rate the code around 7-8, with the note that this code will only be completed once hardening as improved. 
+To conclude then, I will rate the code around 7-8, with the note that this code will only be completed once hardening on corner case testing is completed. 
 
 ## Future Work
 The following features can be added:
