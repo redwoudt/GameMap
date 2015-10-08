@@ -32,24 +32,24 @@ Further, the code will output the randomly generated game map into six different
 * ```mapBinaryPosition.dat``` - First two 64-bits are for height and width of whole map, followed by 8-bit element and its absolute x and y position on the map - thus dropping all the unused eUNDEFINED.
 * ```mapString.dat``` - Plain string characters, where the height and widht and seperated by "(", "," and ")", followed by the complete 2D array values (as per ROOM_TYPE)
 * ```mapStringCompressed.txt``` - Starts with height and widht seperated by "(", "," and ")", followed by ROOM_TYPE and its sequential count in brackets "(" and ")". This is similiar to run-length encoding
-* ```mapStringPosition.txt``` - Starts with height and widht seperated by "(", "," and ")", followed by ROOM_TYPE and its absolute position seperated by "(", "," and ")" - thus dropping all the unused eUNDEFINED.
+* ```mapStringPosition.txt``` - Starts with height and widht seperated by "(", "," and ")", followed by ROOM_TYPE and its absolute position seperated by "(", "," and ")" - thus dropping all the unused eUNDEFINED.<br>
 ###Map Data Structures
 Two map data structures where used, namely <br>:
-* 2D Array - this is fine for small maps, but will be a concern for large maps as a lot of space is potentially used for undefined space
-* Graph - each room is linked to its neighbours in typical graph form. 
+* 2D Array - this is fine for small maps, but will be a concern for large maps as a lot of space is potentially used for undefined space <br>
+* Graph - each room is linked to its neighbours in typical graph form.  <br>
 ###Test Suite
-A Test suite was created that basically runs the following sequence of tests:
-1) create random map
-2) display map 
-3) serialize map to plain string and save to file
-4) serialize map to plain binary and save to file
-5) serialize map to plain string and save to file
-6) serialize map to plain binary and save to file
-7) serialize map to plain string and save to file
-8) serialize map to plain binary and save to file
-9-14) read-in each file and convert back to map
-15) find optimal path
-16) create graph map
+A Test suite was created that basically runs the following sequence of tests:<br>
+1) create random map<br>
+2) display map <br>
+3) serialize map to plain string and save to file<br>
+4) serialize map to plain binary and save to file<br>
+5) serialize map to plain string and save to file<br>
+6) serialize map to plain binary and save to file<br>
+7) serialize map to plain string and save to file<br>
+8) serialize map to plain binary and save to file<br>
+9-14) read-in each file and convert back to map<br>
+15) find optimal path<br>
+16) create graph map<br>
 ## Code Design
 
 The intention while writing the code is to show case patterns that can be utilized within the giving content. Design patterns used, included: <br>
