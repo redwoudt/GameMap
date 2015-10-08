@@ -57,6 +57,9 @@ A Test suite was created that basically runs the following sequence of tests:<br
 15) find optimal path<br>
 16) create graph map<br>
 
+###Doxygen
+Doxygen was generated in the ``doxygen`` folder to help explain the code structure. Due to time constraints only Interface.h was properly commented for doxygen purposes. This can be easily extended to the rest of the code base.
+
 ## Code Design
 
 The intention, while writing the code, was to showcase patterns that can be utilized, within the given content. Design patterns used, included: <br>
@@ -99,7 +102,7 @@ I think the structure of the good is great (close to 10), due to the following r
 
 Testability is pretty good, as demonstrated by the TestSuite class, maybe an 8.
 
-Coding style and convention are good in terms of variable, function and class names. The use of const is also well utilized. The code does require more comments and should go through Doxygen testing before completing the code. 
+Coding style and convention are good in terms of variable, function and class names. The use of const is also well utilized. The code does require more comments and should go through complete Doxygen commenting before completing the code. 
 
 Hardening of the code has not been much of a focus yet and will only get a 5 now.
 
