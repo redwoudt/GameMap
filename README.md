@@ -65,12 +65,25 @@ The intention, while writing the code, was to show case patterns that can be uti
 * ``Singleton``
 * ``Receiver``
 
-Further, a logging header as integrated, from a third party, to make it easy to manage the debug levels, which can be controlled with the ``LOG_LEVEL`` #define.
+Further, a logging header was integrated, from a third party, to make it easier to manage the debug levels, which can be controlled with the ``LOG_LEVEL`` #define.
 
 
 ## Discussion on Code
 ###In which area(s) is the code deficient?
+The following needs to be looked at: <br>
+* unhappy paths - unit testing should be implemented to expose elements like the following:
+** upper and lower bound values
+** negative values
+** making calls out of sequence
+** ingesting bad data (wrong format, missing header, longer than defined in header, etc)
+* namespaces & code seperation - ideally the classes should be grouped into their own namespaces to help scope the data and avoid future conflicts
+* use the Point struct instead of using a pair. Point can be futher extended if needed, like working in 3D space, but a pair is very limited
+* threads - ideally the receiver and test suite should run in their own thread context. Due to time limitations this was not implemented
+* implement test tool to compare serialized and deserialized maps automatically
 ###What would you change and why?
+The following changes are at the front:
+* GameMap2DArray and GameMapGraph classes shared duplicate code, which should be moved into the parent. 
+* DataConverter.cpp - there is duplicate code for the different file formats, especially around header parsing. This should be moved into a shared function(s)
 ###How close do you think this is to what you would call "perfect" code, on a scale of 1 to 10
 
 ## Future Work
